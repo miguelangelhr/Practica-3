@@ -1,3 +1,3 @@
 require_relative '../lib/radio.rb'
 
-RadioCircunsferencia.new(ARGV[0])
+RadioCiscunsferencia.new(ARGV[0])
