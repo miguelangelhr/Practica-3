@@ -1,0 +1,3 @@
+require 'lib/radio.rb'
+
+RadioCircunsferencia.new(ARGV[0])
