@@ -19,31 +19,26 @@ class RadioCircunsferencia
 		
 		# Evaluamos si no es un numero mostramos un error
 		if (@perimetro == 0.0)
+		
+			raise ArgumentError unless perimetro.is_a?(Numeric)
+		
+		# Evaluamos si el numero es negativo
+		elsif (@perimetro < 0.0)
 			
-			puts "\n    Error ---> El valor suministrado debe ser un numero. \n"
+			raise ArgumentError unless @perimetro>0.0
 
-		# Evaluamos el tipo de numero que es(positivo o negativo).
-		else	
+		 # Si es un numero positivo almacenamos los valores
+		else
 
-			# Si el numero es negativo mostramos un error
-			if (@perimetro < 0.0)
+			@@perimetro = @perimetro
+			@@radio = calcular_radio()
 
-				puts "\n    Error ---> El numero #{@perimetro} debe ser positivo.\n"
-
-			 # Si es un numero positivo almacenamos los valores
-                        else
-
-				@@perimetro = @perimetro
-				@@radio = calcular_radio()
-
-		                puts "\n--------------------------------------\n"
-                		puts "- PRACTICA 4 - Radio Circunsferencia -\n"
-                		puts "- Resultados                         -\n"
-               			puts "--------------------------------------\n"
-                		puts "  ---> Para el perimetro: #{@@perimetro} el valor del radio es: #{@@radio} \n\n"
-
-                        end
-			
+			puts "\n--------------------------------------\n"
+			puts "- PRACTICA 4 - Radio Circunsferencia -\n"
+                	puts "- Resultados                         -\n"
+               		puts "--------------------------------------\n"
+                	puts "  ---> Para el perimetro: #{@@perimetro} el valor del radio es: #{@@radio} \n\n"
+                       			
 		end
 		
 	end
