@@ -2,7 +2,7 @@ task :default => :radio
 
 desc "Lanzamos radio.rb con Ruby"
 task :radio do
-  sh "ruby -Ilib bin/ejecutable.rb 5"
+  sh "ruby -Ilib bin/ejecutable.rb 5.2.2.2"
 end
 
 desc "Lanzamos radio.rb con Test Unit"
