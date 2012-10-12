@@ -1,3 +1,4 @@
-require_relative '../lib/radio.rb'
+require 'radio.rb'
 
-RadioCiscunsferencia.new(ARGV[0])
+a = RadioCircunsferencia.new('5.3').radio()
+puts a.class
